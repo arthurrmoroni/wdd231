@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 231</title>
+  <meta name="description"
+    content="Course home page for Arthur Moroni's WDD 231 repository, with a dynamic course list.">
+  <meta name="author" content="Arthur Moroni">
+  <title>WDD 231 – Arthur Moroni</title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/app.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
+
 <body>
   <header>
     <img src="images/logo.svg" alt="Arthur Moroni logo" width="24" height="24">
@@ -15,9 +22,33 @@
     <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false"></button>
   </header>
 
+  <nav id="primary-nav">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="chamber/">Chamber</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <h1>WDD 231 - Web Frontend Development I</h1>
+    <h1>WDD 231 – Web Frontend Development I</h1>
     <p>Course repository of Arthur Moroni.</p>
+
+    <section id="courses">
+      <h2>Courses</h2>
+      <div class="filters">
+        <button data-subject="all" class="active">All</button>
+        <button data-subject="CSE">CSE</button>
+        <button data-subject="WDD">WDD</button>
+      </div>
+      <div id="course-list"></div>
+      <p>Total credits: <span id="credit-total">0</span></p>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Arthur Moroni, WDD 231</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
 </body>
+
 </html>
