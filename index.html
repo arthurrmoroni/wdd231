@@ -25,29 +25,47 @@
   <nav id="primary-nav">
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="chamber/">Chamber</a></li>
+      <li><a href="chamber/">Chamber Project</a></li>
+      <li><a href="chamber/">Final Project</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1>WDD 231 – Web Frontend Development I</h1>
-    <p>Course repository of Arthur Moroni.</p>
+    <h1>Home</h1>
+
+    <section class="about-grid">
+      <div class="about-me">
+        <h2>About Me</h2>
+        <p>I'm Arthur, working toward a Bachelor's degree in
+          Software Development through BYU-Idaho. I'm fluent in Portuguese and English, with working Spanish, and I'm
+          excited to build a career in web development.</p>
+      </div>
+      <div class="student-photo">
+        <h2>Student Photo</h2>
+        <img src="images/profile.jpg" alt="Photo of Arthur Moroni">
+      </div>
+    </section>
 
     <section id="courses">
-      <h2>Courses</h2>
+      <h2>Web Certificate Courses</h2>
       <div class="filters">
         <button data-subject="all" class="active">All</button>
         <button data-subject="CSE">CSE</button>
         <button data-subject="WDD">WDD</button>
       </div>
       <div id="course-list"></div>
-      <p>Total credits: <span id="credit-total">0</span></p>
+      <p>The total credits for courses listed above is <span id="credit-total">0</span></p>
     </section>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/arthurmoroni" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+      <a href="https://github.com/arthurrmoroni" aria-label="GitHub" target="_blank">GitHub</a>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Arthur Moroni, WDD 231</p>
-    <p>Last Updated: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> &bull; Arthur Moroni &bull; Porto, Portugal</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 </body>
 

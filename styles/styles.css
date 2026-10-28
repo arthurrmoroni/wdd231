@@ -1,112 +1,152 @@
 header {
-    display: grid;
-    grid-template-columns: 24px 1fr 44px;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
+  display: grid;
+  grid-template-columns: 24px 1fr 44px;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .hamburger {
-    width: 44px;
-    height: 44px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.hamburger::before {
-    content: "\2630";
-}
+.hamburger::before { content: "\2630"; }
+.hamburger.show::before { content: "\00D7"; }
 
-.hamburger.show::before {
-    content: "\00D7";
-}
-
-#primary-nav {
-    display: none;
-}
-
-#primary-nav.show {
-    display: block;
-}
+#primary-nav { display: none; }
+#primary-nav.show { display: block; }
 
 #primary-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 1rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #primary-nav a {
-    text-decoration: none;
-    color: inherit;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: #333;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #444;
 }
 
 #primary-nav a[aria-current="page"] {
-    font-weight: bold;
-    border-bottom: 2px solid currentColor;
+  background: #555;
+  font-weight: bold;
 }
 
-main {
-    padding: 1rem 1.5rem;
+main { padding: 1rem 1.5rem; }
+
+.about-grid {
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+.about-me, .student-photo {
+  border: 1px solid #ddd;
+}
+
+.about-me h2, .student-photo h2 {
+  background: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.about-me p { padding: 1rem; }
+
+.student-photo img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 1rem auto;
+}
+
+#courses h2 {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
 }
 
 .filters {
-    display: flex;
-    gap: 0.5rem;
-    margin-block: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+  margin-block: 0.5rem;
 }
 
 .filters button {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    background: #fff;
-    cursor: pointer;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  background: #e8e8e8;
+  cursor: pointer;
 }
 
 .filters button.active {
-    background: #1e3a8a;
-    color: #fff;
+  background: #1e3a8a;
+  color: #fff;
 }
 
-#course-list {
-    display: grid;
-    gap: 0.5rem;
-}
+#course-list { display: grid; gap: 0.4rem; }
 
 .course-card {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #e8e8e8;
+  border: 1px solid #ccc;
 }
 
 .course-card.completed {
-    background: #e5f4e4;
-    text-decoration: line-through;
-    opacity: 0.75;
+  background: #d7ecd5;
+  text-decoration: line-through;
+  color: #2f4f2f;
+}
+
+#courses > p {
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
 }
 
 footer {
-    padding: 1rem 1.5rem;
-    text-align: center;
-    font-size: 0.875rem;
-    color: #555;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #555;
 }
 
 @media (min-width: 40rem) {
-    .hamburger {
-        display: none;
-    }
-
-    #primary-nav {
-        display: block;
-    }
-
-    #primary-nav ul {
-        flex-direction: row;
-        padding: 0.75rem
+  .hamburger { display: none; }
+  #primary-nav { display: block; }
+  #primary-nav ul {
+    display: flex;
+  }
+  #primary-nav a {
+    border-bottom: none;
+  }
+  .about-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
