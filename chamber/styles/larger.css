@@ -1,0 +1,51 @@
+@media screen and (min-width: 40rem) {
+
+  #members.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #members.list .member-card {
+    grid-template-columns: 1.3fr 0.7fr 2fr 1fr 1.4fr;
+    align-items: center;
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 56rem) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  #primary-nav {
+    display: block;
+    background: none;
+  }
+
+  #primary-nav ul {
+    display: flex;
+  }
+
+  #primary-nav a {
+    padding: 1.6rem 1.1rem;
+  }
+
+  #primary-nav a:hover,
+  #primary-nav a[aria-current="page"] {
+    background-color: var(--secondary);
+  }
+
+  #members.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

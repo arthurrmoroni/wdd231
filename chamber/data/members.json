@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "name": "Ribeira Bakery",
+      "address": "Cais da Ribeira 22, 4050-510 Porto",
+      "phone": "+351 220 111 201",
+      "website": "https://ribeirabakery.example",
+      "image": "ribeira-bakery.webp",
+      "membershipLevel": 3,
+      "industry": "Food & Beverage",
+      "founded": 1998
+    },
+    {
+      "name": "Douro Tech Solutions",
+      "address": "Avenida da Boavista 1200, 4100-130 Porto",
+      "phone": "+351 220 111 202",
+      "website": "https://dourotech.example",
+      "image": "douro-tech.webp",
+      "membershipLevel": 3,
+      "industry": "Technology",
+      "founded": 2015
+    },
+    {
+      "name": "Azulejo Design Studio",
+      "address": "Rua das Flores 85, 4050-265 Porto",
+      "phone": "+351 220 111 203",
+      "website": "https://azulejostudio.example",
+      "image": "azulejo-studio.webp",
+      "membershipLevel": 2,
+      "industry": "Design & Crafts",
+      "founded": 2009
+    },
+    {
+      "name": "Bolhão Market Foods",
+      "address": "Rua Formosa 322, 4000-248 Porto",
+      "phone": "+351 220 111 204",
+      "website": "https://bolhaofoods.example",
+      "image": "bolhao-market-foods.webp",
+      "membershipLevel": 1,
+      "industry": "Retail",
+      "founded": 1987
+    },
+    {
+      "name": "Foz Surf School",
+      "address": "Avenida do Brasil 450, 4150-153 Porto",
+      "phone": "+351 220 111 205",
+      "website": "https://fozsurf.example",
+      "image": "foz-surf-school.webp",
+      "membershipLevel": 1,
+      "industry": "Sports & Leisure",
+      "founded": 2012
+    },
+    {
+      "name": "Invicta Legal Advisors",
+      "address": "Praça da Liberdade 15, 4000-322 Porto",
+      "phone": "+351 220 111 206",
+      "website": "https://invictalegal.example",
+      "image": "invicta-legal.webp",
+      "membershipLevel": 2,
+      "industry": "Professional Services",
+      "founded": 2001
+    },
+    {
+      "name": "Clérigos Books",
+      "address": "Rua dos Clérigos 40, 4050-205 Porto",
+      "phone": "+351 220 111 207",
+      "website": "https://clerigosbooks.example",
+      "image": "clerigos-books.webp",
+      "membershipLevel": 1,
+      "industry": "Retail",
+      "founded": 1994
+    },
+    {
+      "name": "Gaia Port Cellars",
+      "address": "Avenida Diogo Leite 70, 4400-111 Vila Nova de Gaia",
+      "phone": "+351 220 111 208",
+      "website": "https://gaiaportcellars.example",
+      "image": "gaia-port-cellars.webp",
+      "membershipLevel": 3,
+      "industry": "Wine & Tourism",
+      "founded": 1925
+    }
+  ]
+}

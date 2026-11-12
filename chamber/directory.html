@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directory | Porto Chamber of Commerce</title>
+  <meta name="description"
+    content="Browse the member directory of the Porto Chamber of Commerce: local businesses, contacts and membership levels.">
+  <meta name="author" content="Arthur Moroni">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Directory | Porto Chamber of Commerce">
+  <meta property="og:description"
+    content="Find and connect with member businesses of the Porto Chamber of Commerce in Porto and Vila Nova de Gaia.">
+  <meta property="og:image" content="https://arthurrmoroni.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://arthurrmoroni.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/chamber-logo.webp" alt="Porto Chamber of Commerce logo" width="48" height="48">
+        <span>Porto<br><small>Chamber of Commerce</small></span>
+      </a>
+      <button id="menu" class="menu-button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav"></button>
+    </div>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Member Directory</h1>
+
+    <div class="view-toggle" role="group" aria-label="Choose directory layout">
+      <button id="grid-btn" class="active" aria-pressed="true">Grid</button>
+      <button id="list-btn" aria-pressed="false">List</button>
+    </div>
+
+    <section id="members" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="contact">
+        <h2>Porto Chamber of Commerce</h2>
+        <p>Rua de Santa Catarina 100<br>4000-447 Porto, Portugal</p>
+        <p><a href="mailto:info@portochamber.example">info@portochamber.example</a></p>
+        <p><a href="tel:+351220000000">+351 220 000 000</a></p>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="dev-info">
+        <p>&copy; <span id="year"></span> Porto Chamber of Commerce</p>
+        <p>Arthur Moroni</p>
+        <p>WDD 231 Class Project</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
