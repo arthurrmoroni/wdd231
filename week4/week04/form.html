@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="W04 learning activity: advanced forms with URLSearchParams.">
+  <meta name="author" content="Arthur Moroni">
+  <title>Appointment Form | WDD 231 – Arthur Moroni</title>
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+  <main>
+    <h1>Request an Appointment</h1>
+
+    <form action="thanks.html" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="first">First Name</label>
+        <input type="text" id="first" name="first" autocomplete="given-name" required>
+
+        <label for="last">Last Name</label>
+        <input type="text" id="last" name="last" autocomplete="family-name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="912 345 678" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Appointment</legend>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="service">Service</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Choose a service</option>
+          <option value="Consultation">Consultation</option>
+          <option value="Website Review">Website Review</option>
+          <option value="Follow-up">Follow-up</option>
+        </select>
+
+        <p>Contact preference</p>
+        <label><input type="radio" name="contact" value="Email" checked> Email</label>
+        <label><input type="radio" name="contact" value="Phone"> Phone</label>
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+
+        <label><input type="checkbox" name="newsletter" value="Yes"> Subscribe to the newsletter</label>
+      </fieldset>
+
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+</body>
+
+</html>
