@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join | Porto Chamber of Commerce</title>
+  <meta name="description"
+    content="Apply for membership in the Porto Chamber of Commerce and compare the NP, Bronze, Silver and Gold membership levels.">
+  <meta name="author" content="Arthur Moroni">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Join | Porto Chamber of Commerce">
+  <meta property="og:description"
+    content="Become a member of the Porto Chamber of Commerce and grow your business in Porto and Vila Nova de Gaia.">
+  <meta property="og:image" content="https://arthurrmoroni.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://arthurrmoroni.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/chamber-logo.webp" alt="Porto Chamber of Commerce logo" width="48" height="48">
+        <span>Porto<br><small>Chamber of Commerce</small></span>
+      </a>
+      <button id="menu" class="menu-button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav"></button>
+    </div>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Join the Chamber</h1>
+
+    <div class="join">
+      <form class="join-form" action="thankyou.html" method="get">
+        <fieldset>
+          <legend>About You</legend>
+
+          <label>First Name *
+            <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
+          </label>
+
+          <label>Last Name *
+            <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+          </label>
+
+          <label>Organizational Title
+            <input type="text" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}"
+              title="Letters, hyphens and spaces only, at least 7 characters">
+          </label>
+
+          <label>Email *
+            <input type="email" name="email" title="Enter a valid email address" autocomplete="email"
+              placeholder="name@example.com" required>
+          </label>
+
+          <label>Mobile Phone *
+            <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>About Your Business</legend>
+
+          <label>Business / Organization Name *
+            <input type="text" name="business" title="Enter your business or organization name"
+              autocomplete="organization" required>
+          </label>
+
+          <label>Membership Level *
+            <select name="membership" title="Choose a membership level" required>
+              <option value="" disabled selected>Select a level</option>
+              <option value="np">NP Membership (non profit, no fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>Business Description
+            <textarea name="description" rows="4" title="Tell us briefly about your business"></textarea>
+          </label>
+        </fieldset>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <input type="submit" value="Submit Application">
+      </form>
+
+      <section class="levels" aria-label="Membership levels">
+        <div class="level-card np">
+          <h2>NP Membership</h2>
+          <p>Non profit organizations · No fee</p>
+          <a href="#np-modal" data-modal="np-modal">Learn more</a>
+        </div>
+        <div class="level-card bronze">
+          <h2>Bronze Membership</h2>
+          <p>€150 per year</p>
+          <a href="#bronze-modal" data-modal="bronze-modal">Learn more</a>
+        </div>
+        <div class="level-card silver">
+          <h2>Silver Membership</h2>
+          <p>€350 per year</p>
+          <a href="#silver-modal" data-modal="silver-modal">Learn more</a>
+        </div>
+        <div class="level-card gold">
+          <h2>Gold Membership</h2>
+          <p>€750 per year</p>
+          <a href="#gold-modal" data-modal="gold-modal">Learn more</a>
+        </div>
+      </section>
+    </div>
+
+    <dialog id="np-modal" class="level-modal" aria-labelledby="np-title">
+      <button type="button" class="close-modal" aria-label="Close">✕</button>
+      <h2 id="np-title">NP Membership</h2>
+      <p class="price">No fee · For non profit organizations</p>
+      <ul>
+        <li>Listing in the member directory</li>
+        <li>Monthly chamber newsletter</li>
+        <li>Invitations to community networking events</li>
+      </ul>
+    </dialog>
+
+    <dialog id="bronze-modal" class="level-modal" aria-labelledby="bronze-title">
+      <button type="button" class="close-modal" aria-label="Close">✕</button>
+      <h2 id="bronze-title">Bronze Membership</h2>
+      <p class="price">€150 per year</p>
+      <ul>
+        <li>All NP benefits</li>
+        <li>10% discount on chamber events</li>
+        <li>Access to monthly business training workshops</li>
+        <li>Logo on the member directory listing</li>
+      </ul>
+    </dialog>
+
+    <dialog id="silver-modal" class="level-modal" aria-labelledby="silver-title">
+      <button type="button" class="close-modal" aria-label="Close">✕</button>
+      <h2 id="silver-title">Silver Membership</h2>
+      <p class="price">€350 per year</p>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>20% discount on chamber events</li>
+        <li>Eligible for spotlight positions on the home page</li>
+        <li>One featured post per quarter on chamber social media</li>
+      </ul>
+    </dialog>
+
+    <dialog id="gold-modal" class="level-modal" aria-labelledby="gold-title">
+      <button type="button" class="close-modal" aria-label="Close">✕</button>
+      <h2 id="gold-title">Gold Membership</h2>
+      <p class="price">€750 per year</p>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Free entry to all chamber events</li>
+        <li>Priority spotlight position on the home page</li>
+        <li>Banner advertising in the monthly newsletter</li>
+        <li>Invitation to the annual Gold members' dinner</li>
+      </ul>
+    </dialog>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="contact">
+        <h2>Porto Chamber of Commerce</h2>
+        <p>Rua de Santa Catarina 100<br>4000-447 Porto, Portugal</p>
+        <p><a href="mailto:info@portochamber.example">info@portochamber.example</a></p>
+        <p><a href="tel:+351220000000">+351 220 000 000</a></p>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="dev-info">
+        <p>&copy; <span id="year"></span> Porto Chamber of Commerce</p>
+        <p>Arthur Moroni</p>
+        <p>WDD 231 Class Project</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -35,6 +35,11 @@
   .hero-text h1 {
     font-size: 2rem;
   }
+
+  /* Join: level cards two per row below the form */
+  .levels {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (min-width: 56rem) {
@@ -81,5 +86,15 @@
 
   .spotlight img {
     width: 160px;
+  }
+
+  /* Join: form on the left, level cards on the right */
+  .join {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+
+  .levels {
+    grid-template-columns: 1fr;
   }
 }

@@ -415,3 +415,197 @@ footer a {
 .spotlight a {
   overflow-wrap: anywhere;
 }
+
+/* ---------- Join page ---------- */
+.join {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.join-form fieldset {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: var(--card);
+}
+
+.join-form legend {
+  padding: 0 0.5rem;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.join-form label {
+  display: block;
+  margin-top: 0.85rem;
+  font-weight: 700;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 44px;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.join-form input:required:valid,
+.join-form select:required:valid {
+  border-left: 6px solid #2e7d32;
+}
+
+.join-form input[type="submit"] {
+  width: auto;
+  padding: 0.75rem 2rem;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.join-form input[type="submit"]:hover,
+.join-form input[type="submit"]:focus {
+  background-color: var(--secondary);
+}
+
+/* Membership level cards (animated on page load) */
+.levels {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.level-card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-left: 8px solid var(--primary);
+  border-radius: 8px;
+  background-color: var(--card);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  animation: card-in 0.8s ease-out both;
+}
+
+.level-card h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.level-card p {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+}
+
+.level-card a {
+  font-weight: 700;
+}
+
+.level-card.np { border-left-color: #8a8a8a; }
+.level-card.bronze { border-left-color: #a0612b; animation-delay: 0.2s; }
+.level-card.silver { border-left-color: #8d96a3; animation-delay: 0.4s; }
+.level-card.gold { border-left-color: var(--accent); animation-delay: 0.6s; }
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .level-card {
+    animation: none;
+  }
+}
+
+/* Membership modals */
+.level-modal {
+  width: 90%;
+  max-width: 500px;
+  padding: 1.5rem;
+  border: none;
+  border-top: 6px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.4);
+}
+
+.level-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.level-modal h2 {
+  margin: 0 2.5rem 0.25rem 0;
+  color: var(--primary);
+}
+
+.level-modal .price {
+  margin: 0 0 0.75rem;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.level-modal ul {
+  padding-left: 1.25rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ---------- Thank you page ---------- */
+.application-summary {
+  max-width: 600px;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.application-summary h2 {
+  margin: 0 0 0.75rem;
+  color: var(--secondary);
+}
+
+#results {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0;
+}
+
+#results dt {
+  font-weight: 700;
+}
+
+#results dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
