@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porto Chamber of Commerce</title>
+  <meta name="description"
+    content="The Porto Chamber of Commerce connects local businesses in Porto and Vila Nova de Gaia. See upcoming events, local weather and member spotlights.">
+  <meta name="author" content="Arthur Moroni">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Porto Chamber of Commerce">
+  <meta property="og:description"
+    content="Connecting and growing local businesses in Porto and Vila Nova de Gaia.">
+  <meta property="og:image" content="https://arthurrmoroni.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://arthurrmoroni.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/chamber-logo.webp" alt="Porto Chamber of Commerce logo" width="48" height="48">
+        <span>Porto<br><small>Chamber of Commerce</small></span>
+      </a>
+      <button id="menu" class="menu-button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav"></button>
+    </div>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="home">
+    <section class="hero">
+      <img src="images/hero-large.webp" srcset="images/hero-small.webp 800w, images/hero-large.webp 1600w"
+        sizes="(min-width: 75rem) 1200px, 100vw"
+        alt="Illustration of the colorful Ribeira riverfront in Porto with the Dom Luís I bridge over the Douro River"
+        width="1600" height="800">
+      <div class="hero-text">
+        <h1>Grow your business in Porto</h1>
+        <a href="join.html" class="cta">Join the Chamber</a>
+      </div>
+    </section>
+
+    <section class="events card">
+      <h2>Current Events</h2>
+      <ul>
+        <li>
+          <h3>Business Networking Breakfast</h3>
+          <p><strong>November 20</strong> · Palácio da Bolsa, 8:00 AM</p>
+          <p>Meet other members over coffee and pastéis de nata.</p>
+        </li>
+        <li>
+          <h3>Small Business Digital Workshop</h3>
+          <p><strong>December 4</strong> · Douro Tech Solutions, 6:30 PM</p>
+          <p>Practical tips for websites, social media and online sales.</p>
+        </li>
+        <li>
+          <h3>Christmas Market on Avenida dos Aliados</h3>
+          <p><strong>December 12–23</strong> · Downtown Porto</p>
+          <p>Member stalls get a discounted rate. Apply by November 30.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="weather card">
+      <h2>Porto Weather</h2>
+      <div class="current">
+        <div id="weather-icon" class="weather-icon"></div>
+        <div>
+          <p class="temp" id="current-temp">--</p>
+          <p id="weather-desc">Loading current weather…</p>
+        </div>
+      </div>
+      <h3>3-Day Forecast</h3>
+      <ul id="forecast">
+        <li>Loading forecast…</li>
+      </ul>
+    </section>
+
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-cards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="contact">
+        <h2>Porto Chamber of Commerce</h2>
+        <p>Rua de Santa Catarina 100<br>4000-447 Porto, Portugal</p>
+        <p><a href="mailto:info@portochamber.example">info@portochamber.example</a></p>
+        <p><a href="tel:+351220000000">+351 220 000 000</a></p>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="dev-info">
+        <p>&copy; <span id="year"></span> Porto Chamber of Commerce</p>
+        <p>Arthur Moroni</p>
+        <p>WDD 231 Class Project</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -146,8 +146,7 @@ h1 {
 
 .member-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   border-radius: 4px;
   margin-bottom: 0.75rem;
 }
@@ -162,7 +161,7 @@ h1 {
 }
 
 .member-card a {
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .industry {
@@ -265,4 +264,154 @@ footer a {
 
 .dev-info p {
   font-size: 0.9rem;
+}
+
+/* ---------- Home page ---------- */
+.home {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero {
+  position: relative;
+  margin: -1.5rem -1rem 0;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+
+.hero-text h1 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.cta:hover,
+.cta:focus {
+  background-color: #fff;
+  color: var(--text);
+}
+
+.card,
+.spotlight {
+  background-color: var(--card);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.home h2 {
+  color: var(--secondary);
+  margin: 0 0 0.75rem;
+}
+
+.home h3 {
+  color: var(--primary);
+  font-size: 1.05rem;
+  margin: 0 0 0.25rem;
+}
+
+.events ul,
+#forecast {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.events li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.events li:last-child {
+  border-bottom: none;
+}
+
+.events p,
+.spotlight p {
+  margin: 0.2rem 0;
+}
+
+.weather .current {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.weather-icon img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.weather .temp {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+#forecast li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+#spotlight-cards {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.spotlight {
+  border-top: 4px solid var(--accent);
+}
+
+.spotlight-body {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin-top: 0.5rem;
+}
+
+.spotlight img {
+  width: 120px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.spotlight a {
+  overflow-wrap: anywhere;
 }

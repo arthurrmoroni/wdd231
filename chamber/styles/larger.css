@@ -13,6 +13,28 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
   }
+
+  /* Home: events and weather side by side */
+  .home {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+
+  .hero,
+  .spotlights {
+    grid-column: 1 / -1;
+  }
+
+  .hero-text {
+    left: 2rem;
+    right: auto;
+    bottom: 2rem;
+    padding: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (min-width: 56rem) {
@@ -47,5 +69,17 @@
 
   #members.grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  #spotlight-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .spotlight-body {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight img {
+    width: 160px;
   }
 }
