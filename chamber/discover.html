@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Porto | Porto Chamber of Commerce</title>
+  <meta name="description"
+    content="Discover Porto with the Porto Chamber of Commerce: eight places to visit, key facts about the city and why it is a great place to live, visit and do business.">
+  <meta name="author" content="Arthur Moroni">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Discover Porto | Porto Chamber of Commerce">
+  <meta property="og:description"
+    content="Eight places to discover in Porto and Vila Nova de Gaia, recommended by the Porto Chamber of Commerce.">
+  <meta property="og:image" content="https://arthurrmoroni.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://arthurrmoroni.github.io/wdd231/chamber/discover.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/discover.css">
+  <script src="scripts/common.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/chamber-logo.webp" alt="Porto Chamber of Commerce logo" width="48" height="48">
+        <span>Porto<br><small>Chamber of Commerce</small></span>
+      </a>
+      <button id="menu" class="menu-button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav"></button>
+    </div>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" aria-current="page">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="discover-intro">
+      <h1>Discover Porto</h1>
+      <p>From the baroque towers of the old town to the Port wine cellars across the river in Vila Nova de Gaia,
+        Porto combines centuries of trade with a lively cultural and business scene. Here are eight places our
+        members love to recommend to visitors, clients and new neighbors.</p>
+    </div>
+
+    <div id="visit-banner" class="visit-message">
+      <p id="visit-text">Welcome! Let us know if you have any questions.</p>
+      <button type="button" id="visit-close" class="visit-close" aria-label="Close message">&#10005;</button>
+    </div>
+
+    <div id="discover-grid" class="discover-grid">
+      <section id="facts" class="card facts">
+        <h2>Porto at a Glance</h2>
+        <dl>
+          <div>
+            <dt>City population</dt>
+            <dd>231,800 residents (2021 Census)</dd>
+          </div>
+          <div>
+            <dt>Metropolitan area</dt>
+            <dd>About 1.86 million people in 17 municipalities (2025)</dd>
+          </div>
+          <div>
+            <dt>World Heritage</dt>
+            <dd>Historic center listed by UNESCO since 1996</dd>
+          </div>
+          <div>
+            <dt>Famous export</dt>
+            <dd>Port wine, aged in the cellars of Vila Nova de Gaia</dd>
+          </div>
+        </dl>
+        <p class="source">Sources: INE Census 2021 and PORDATA.</p>
+      </section>
+    </div>
+
+    <dialog id="place-dialog" class="level-modal"></dialog>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="contact">
+        <h2>Porto Chamber of Commerce</h2>
+        <p>Rua de Santa Catarina 100<br>4000-447 Porto, Portugal</p>
+        <p><a href="mailto:info@portochamber.example">info@portochamber.example</a></p>
+        <p><a href="tel:+351220000000">+351 220 000 000</a></p>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="dev-info">
+        <p>&copy; <span id="year"></span> Porto Chamber of Commerce</p>
+        <p>Arthur Moroni</p>
+        <p>WDD 231 Class Project</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

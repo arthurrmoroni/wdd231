@@ -1,0 +1,252 @@
+/* ==========================================================
+   Discover page
+   Small screens (320px - 640px) are the default styles.
+   Medium (641px - 1024px) and large (1025px and up) screens
+   use media queries at the end of this file.
+   ========================================================== */
+
+.discover-intro {
+  max-width: 70ch;
+}
+
+.discover-intro h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Visit message ---------- */
+.visit-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-left: 6px solid var(--accent);
+  border-radius: 8px;
+  background-color: var(--card);
+}
+
+.visit-message p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.visit-close {
+  flex-shrink: 0;
+  min-width: 44px;
+  min-height: 44px;
+  border: none;
+  background: none;
+  color: var(--text);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.visit-close:hover,
+.visit-close:focus-visible {
+  color: var(--secondary);
+}
+
+/* ---------- Grid: small screens (one column) ---------- */
+.discover-grid {
+  display: grid;
+  align-content: start;
+  gap: 1.25rem;
+  min-height: 80vh; /* reserves space for the cards added by JavaScript (no footer jump) */
+  grid-template-areas:
+    "facts"
+    "bolsa"
+    "clerigos"
+    "lello"
+    "saobento"
+    "ribeira"
+    "gaia"
+    "bolhao"
+    "serralves";
+}
+
+#facts { grid-area: facts; }
+#bolsa { grid-area: bolsa; }
+#clerigos { grid-area: clerigos; }
+#lello { grid-area: lello; }
+#saobento { grid-area: saobento; }
+#ribeira { grid-area: ribeira; }
+#gaia { grid-area: gaia; }
+#bolhao { grid-area: bolhao; }
+#serralves { grid-area: serralves; }
+
+/* ---------- Porto at a Glance ---------- */
+.facts h2 {
+  margin: 0 0 0.75rem;
+  color: var(--secondary);
+  font-size: 1.3rem;
+}
+
+.facts dl {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.facts dt {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.facts .source {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Place cards ---------- */
+.place-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.place-card h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+.place-card figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.place-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.place-card address {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: normal;
+}
+
+.place-card p {
+  margin: 0;
+}
+
+.place-card button {
+  align-self: flex-start;
+  margin-top: auto;
+  min-height: 44px;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.place-card button:hover,
+.place-card button:focus-visible {
+  background-color: var(--secondary);
+}
+
+/* ---------- "Learn More" dialog ---------- */
+#place-dialog address {
+  margin-bottom: 0.75rem;
+  color: var(--secondary);
+  font-style: normal;
+  font-weight: 700;
+}
+
+#place-dialog p {
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Medium screens: 641px - 1024px ---------- */
+@media screen and (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "bolsa     bolsa"
+      "facts     clerigos"
+      "lello     saobento"
+      "ribeira   gaia"
+      "bolhao    serralves";
+  }
+
+  /* The featured card shows its image beside the text */
+  .place-card.featured {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "photo title"
+      "photo address"
+      "photo text"
+      "photo action";
+    gap: 0.6rem 1.25rem;
+  }
+
+  .featured figure {
+    grid-area: photo;
+    align-self: center;
+  }
+
+  .featured h2 {
+    grid-area: title;
+  }
+
+  .featured address {
+    grid-area: address;
+  }
+
+  .featured p {
+    grid-area: text;
+  }
+
+  .featured button {
+    grid-area: action;
+    justify-self: start;
+  }
+
+  /* Hover effect on the images (not used on small screens) */
+  .place-card img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  .place-card img:hover {
+    transform: scale(1.08);
+    filter: saturate(1.35) brightness(1.05);
+  }
+}
+
+/* ---------- Large screens: 1025px and up ---------- */
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(3, 1fr) minmax(220px, 0.9fr);
+    grid-template-areas:
+      "bolsa     bolsa     clerigos  facts"
+      "lello     saobento  ribeira   facts"
+      "gaia      bolhao    serralves facts";
+  }
+
+  .facts {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .place-card img {
+    transition: none;
+  }
+}
