@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1180" viewBox="0 0 1800 1180">
+  <defs>
+    <style>
+      .ink { fill: #111; }
+      .paper { fill: #fff; }
+      .line { fill: none; stroke: #111; stroke-width: 2; }
+      .thin { fill: none; stroke: #111; stroke-width: 1.4; }
+      .dash { fill: none; stroke: #111; stroke-width: 1.4; stroke-dasharray: 7 6; }
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #111; }
+      .smallcaps { font-family: Arial, Helvetica, sans-serif; fill: #111; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; }
+    </style>
+  </defs>
+  <rect class="paper" width="1800" height="1180"/>
+
+  <text x="78" y="88" class="label" font-size="34" font-weight="700" letter-spacing="1.5">PORTO PLATES</text>
+  <text x="78" y="126" class="label" font-size="20">Wireframe da home page</text>
+  <text x="1722" y="88" class="smallcaps" text-anchor="end">PRETO E BRANCO · BAIXA FIDELIDADE</text>
+  <text x="1722" y="119" class="label" font-size="15" text-anchor="end">Estrutura e layout responsivo</text>
+  <path d="M78 164 H1722" class="thin"/>
+
+  <text x="100" y="225" class="smallcaps">MOBILE</text>
+  <text x="100" y="249" class="label" font-size="16">Tela pequena · conteúdo em coluna</text>
+  <text x="625" y="225" class="smallcaps">DESKTOP</text>
+  <text x="625" y="249" class="label" font-size="16">Tela grande · conteúdo lado a lado</text>
+
+  <!-- MOBILE: 390 × 820 -->
+  <g transform="translate(100 274) scale(.9)">
+    <rect x="0" y="0" width="390" height="820" rx="12" class="paper" stroke="#111" stroke-width="2.5"/>
+    <rect x="0" y="0" width="390" height="84" rx="12" class="paper"/>
+    <path d="M0 84 H390" class="thin"/>
+    <text x="24" y="36" class="label" font-size="21" font-weight="700">Porto Plates</text>
+    <text x="24" y="64" class="smallcaps" font-size="10">HOME · PÁGINA ATUAL</text>
+    <path d="M330 29 H366 M330 39 H366 M330 49 H366" class="line" stroke-linecap="round"/>
+    <text x="348" y="68" class="label" font-size="9" text-anchor="middle">menu</text>
+
+    <rect x="24" y="104" width="342" height="150" rx="3" class="paper" stroke="#111" stroke-width="1.6"/>
+    <path d="M32 246 L148 112 M160 246 L276 112 M288 246 L358 164" class="dash"/>
+    <rect x="114" y="164" width="162" height="34" class="paper" stroke="#111" stroke-width="1.2"/>
+    <text x="195" y="186" class="smallcaps" text-anchor="middle" font-size="10">IMAGEM DE DESTAQUE</text>
+
+    <text x="24" y="288" class="label" font-size="24" font-weight="700">Sabores do Porto</text>
+    <text x="24" y="316" class="label" font-size="13">Uma seleção de lugares para provar</text>
+    <text x="24" y="335" class="label" font-size="13">o melhor da cidade.</text>
+    <rect x="24" y="353" width="190" height="42" rx="2" class="paper" stroke="#111" stroke-width="1.8"/>
+    <text x="119" y="380" class="label" font-size="13" font-weight="700" text-anchor="middle">Explorar restaurantes →</text>
+
+    <text x="24" y="431" class="label" font-size="19" font-weight="700">Em destaque</text>
+    <text x="24" y="451" class="label" font-size="11">Restaurantes para conhecer</text>
+    <rect x="24" y="463" width="342" height="88" rx="2" class="paper" stroke="#111" stroke-width="1.4"/>
+    <rect x="36" y="475" width="92" height="64" class="paper" stroke="#111" stroke-width="1.2"/>
+    <text x="82" y="511" class="smallcaps" text-anchor="middle" font-size="9">IMAGEM</text>
+    <text x="143" y="493" class="label" font-size="14" font-weight="700">Casa Guedes</text>
+    <text x="143" y="515" class="label" font-size="11">Santo Ildefonso</text>
+    <text x="143" y="535" class="label" font-size="10">Ver detalhes →</text>
+
+    <rect x="24" y="560" width="342" height="88" rx="2" class="paper" stroke="#111" stroke-width="1.4"/>
+    <rect x="36" y="572" width="92" height="64" class="paper" stroke="#111" stroke-width="1.2"/>
+    <text x="82" y="608" class="smallcaps" text-anchor="middle" font-size="9">IMAGEM</text>
+    <text x="143" y="590" class="label" font-size="14" font-weight="700">Taberna dos Mercadores</text>
+    <text x="143" y="612" class="label" font-size="11">Centro histórico</text>
+    <text x="143" y="632" class="label" font-size="10">Ver detalhes →</text>
+
+    <rect x="24" y="665" width="342" height="48" class="paper" stroke="#111" stroke-width="1.4"/>
+    <text x="40" y="686" class="label" font-size="12" font-weight="700">Conhece um lugar especial?</text>
+    <text x="40" y="703" class="label" font-size="11">Indica um restaurante →</text>
+
+    <path d="M0 729 H390" class="thin"/>
+    <text x="24" y="753" class="label" font-size="10">© 2026 Porto Plates</text>
+    <text x="24" y="779" class="label" font-size="10" text-decoration="underline">Attributions</text>
+    <text x="135" y="779" class="label" font-size="10" text-decoration="underline">Vídeo do projeto</text>
+    <text x="366" y="779" class="label" font-size="9" text-anchor="end">links</text>
+  </g>
+
+  <!-- DESKTOP: 1280 × 800 -->
+  <g transform="translate(625 274) scale(.78)">
+    <rect x="0" y="0" width="1280" height="800" rx="5" class="paper" stroke="#111" stroke-width="2.5"/>
+    <path d="M0 88 H1280" class="thin"/>
+    <text x="38" y="55" class="label" font-size="25" font-weight="700">Porto Plates</text>
+    <rect x="720" y="23" width="112" height="43" rx="2" class="ink"/>
+    <text x="776" y="50" class="label" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" style="fill:#fff">Início</text>
+    <text x="875" y="50" class="label" font-size="14">Restaurantes</text>
+    <text x="1036" y="50" class="label" font-size="14">Indique um restaurante</text>
+
+    <text x="48" y="164" class="label" font-size="43" font-weight="700">Sabores do Porto</text>
+    <text x="48" y="202" class="label" font-size="18">Descubra restaurantes locais e os sabores</text>
+    <text x="48" y="228" class="label" font-size="18">que fazem parte da cidade.</text>
+    <rect x="48" y="259" width="222" height="48" class="paper" stroke="#111" stroke-width="1.8"/>
+    <text x="159" y="289" class="label" font-size="15" font-weight="700" text-anchor="middle">Explorar restaurantes →</text>
+
+    <rect x="650" y="117" width="582" height="250" rx="3" class="paper" stroke="#111" stroke-width="1.6"/>
+    <path d="M666 358 L850 126 M870 358 L1054 126 M1074 358 L1218 176" class="dash"/>
+    <rect x="838" y="219" width="206" height="42" class="paper" stroke="#111" stroke-width="1.2"/>
+    <text x="941" y="246" class="smallcaps" text-anchor="middle">IMAGEM DE DESTAQUE</text>
+
+    <text x="48" y="423" class="label" font-size="24" font-weight="700">Restaurantes em destaque</text>
+    <text x="48" y="448" class="label" font-size="13">Alguns favoritos para começar a explorar</text>
+
+    <rect x="48" y="467" width="372" height="182" class="paper" stroke="#111" stroke-width="1.4"/>
+    <rect x="62" y="481" width="344" height="94" class="paper" stroke="#111" stroke-width="1.2"/>
+    <text x="234" y="534" class="smallcaps" text-anchor="middle">IMAGEM</text>
+    <text x="62" y="602" class="label" font-size="16" font-weight="700">Casa Guedes</text>
+    <text x="62" y="626" class="label" font-size="12">Santo Ildefonso · Ver detalhes →</text>
+
+    <rect x="454" y="467" width="372" height="182" class="paper" stroke="#111" stroke-width="1.4"/>
+    <rect x="468" y="481" width="344" height="94" class="paper" stroke="#111" stroke-width="1.2"/>
+    <text x="640" y="534" class="smallcaps" text-anchor="middle">IMAGEM</text>
+    <text x="468" y="602" class="label" font-size="16" font-weight="700">Taberna dos Mercadores</text>
+    <text x="468" y="626" class="label" font-size="12">Centro histórico · Ver detalhes →</text>
+
+    <rect x="860" y="467" width="372" height="182" class="paper" stroke="#111" stroke-width="1.4"/>
+    <rect x="874" y="481" width="344" height="94" class="paper" stroke="#111" stroke-width="1.2"/>
+    <text x="1046" y="534" class="smallcaps" text-anchor="middle">IMAGEM</text>
+    <text x="874" y="602" class="label" font-size="16" font-weight="700">Cantina 32</text>
+    <text x="874" y="626" class="label" font-size="12">Vitória · Ver detalhes →</text>
+
+    <rect x="48" y="674" width="1184" height="66" class="paper" stroke="#111" stroke-width="1.4"/>
+    <text x="70" y="702" class="label" font-size="15" font-weight="700">Conhece um lugar especial?</text>
+    <text x="70" y="725" class="label" font-size="13">Indica um restaurante para a nossa lista →</text>
+    <rect x="1000" y="688" width="205" height="38" class="paper" stroke="#111" stroke-width="1.5"/>
+    <text x="1102" y="713" class="label" font-size="12" font-weight="700" text-anchor="middle">Enviar sugestão</text>
+
+    <path d="M0 757 H1280" class="thin"/>
+    <text x="38" y="784" class="label" font-size="11">© 2026 Porto Plates</text>
+    <text x="1048" y="784" class="label" font-size="11" text-decoration="underline">Attributions</text>
+    <text x="1232" y="784" class="label" font-size="11" text-anchor="end" text-decoration="underline">Vídeo do projeto</text>
+  </g>
+
+  <path d="M78 1064 H1722" class="thin"/>
+  <text x="78" y="1101" class="smallcaps">COMO A HOME SE ADAPTA</text>
+  <text x="78" y="1130" class="label" font-size="15">Mobile: menu recolhido e conteúdo empilhado.</text>
+  <text x="625" y="1130" class="label" font-size="15">Desktop: links abertos, destaque em duas colunas e cards lado a lado.</text>
+</svg>

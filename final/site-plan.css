@@ -1,0 +1,166 @@
+:root {
+    --azulejo: #1F3A68;
+    --port: #8C1C3A;
+    --cream: #FAF7F2;
+    --ink: #222222;
+    --heading-font: "Playfair Display", Georgia, serif;
+    --body-font: "Source Sans 3", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background-color: var(--cream);
+}
+
+header,
+footer {
+    background-color: var(--azulejo);
+    color: var(--cream);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--azulejo);
+    border-bottom: 3px solid var(--port);
+    padding-bottom: 0.3rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    color: var(--port);
+    margin: 0.5rem 0;
+}
+
+code {
+    background-color: #ffffff;
+    padding: 0 0.25rem;
+    border: 1px solid #dddddd;
+}
+
+.swatches {
+    display: grid;
+    gap: 1rem;
+}
+
+.swatch {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.swatch p {
+    margin: 0;
+}
+
+.chip {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border: 1px solid var(--ink);
+}
+
+.azulejo {
+    background-color: var(--azulejo);
+}
+
+.port {
+    background-color: var(--port);
+}
+
+.cream {
+    background-color: var(--cream);
+}
+
+.ink {
+    background-color: var(--ink);
+}
+
+.font-sample {
+    background-color: #ffffff;
+    border-left: 5px solid var(--port);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.sample {
+    font-size: 1.5rem;
+    margin: 0.3rem 0;
+}
+
+.heading-font {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+.body-font {
+    font-family: var(--body-font);
+}
+
+.wireframes {
+    display: grid;
+    gap: 1rem;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--ink);
+    background-color: #ffffff;
+}
+
+figcaption {
+    font-weight: 600;
+}
+
+@media (min-width: 640px) {
+    .swatches {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wireframes {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+}
